@@ -1,9 +1,10 @@
 (ns clojuremn.core
   (:use ring.util.response
-        ring.adapter.jetty))
+        ring.adapter.jetty
+        clojuremn.homepage))
 
 (defn app [req]
-  (response "Hello World"))
+  (response (index)))
 
 (defn -main []
   (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
