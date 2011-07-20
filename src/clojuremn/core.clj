@@ -1,11 +1,13 @@
 (ns clojuremn.core
-  (:use ring.util.response
-        ring.adapter.jetty
+  (:use ring.adapter.jetty
+        ring.middleware.file
         clojuremn.homepage))
 
-(defn app [req]
-  (response (index)))
+(defn handler [req]
+  {:status   200
+   :headers {"Content-Type" "text/html"}
+   :body    (index)})
 
 (defn -main []
   (let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
-    (run-jetty app {:port port})))
+    (run-jetty (wrap-file handler "resources/public") {:port port})))

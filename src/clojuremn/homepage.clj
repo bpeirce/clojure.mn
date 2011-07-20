@@ -8,8 +8,8 @@
    [:head
     [:meta {:charset "utf-8"}]
     [:title "Clojure.mn - The Minnesota Clojure User Group"]
-    (include-css "http://fonts.googleapis.com/css?family=Sigmar+One&v1")]
+    (include-css "/stylesheets/base.css")]
    [:body
     [:div {:id "header"}
-     [:h1 {:class "container"} "Clojure.mn"]]
+     [:h1 "Clojure.mn"]]
     [:div {:id "content"} "Main content"]]))
