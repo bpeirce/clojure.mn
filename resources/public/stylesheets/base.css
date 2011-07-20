@@ -1,10 +1,32 @@
+body {
+    font-family: Georgia, Serif;
+}
+
+h1 {
+    font-family: Sans-Serif;
+    font-size: 50px;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+#headline {
+    font-style: italic;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+#clojure-j {
+    font-style: italic;
+    padding-right: 6px;
+}
+
 div#content {
     left: 50%;
-    width: 800px;
+    width: 400px;
     height: auto;
-    padding-left: 20px;
-    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
-    overflow: hidden;
 }
