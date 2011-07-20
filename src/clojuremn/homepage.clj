@@ -22,7 +22,7 @@
       [:a {:href "http://maps.google.com/maps/place?q=dunn+bros&cid=14517305764480210858"} "Dunn Bros on 3rd Avenue downtown"] "."]
      [:h2 "July 13, 2011"]
      [:p "We discussed "
-      [:a {:href "http://clojure-conj.org"} "Clojure Conj 2011"]
+      [:a {:href "http://clojure-conj.org"} "Clojure/conj 2011"]
       ", compared the JVM to the CLR, and surveyed the NoSQL landscape."]
      ]
     ]))
