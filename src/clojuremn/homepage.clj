@@ -22,7 +22,9 @@
       "Follow us on "
       [:a {:href "http://twitter.com/clojuremn"} "Twitter"]
       "."
-      ]     [:h2 "Next Meeting"]
+      ]
+     [:img {:id "logo" :src "/images/lambda.png"}]
+     [:h2 "Next Meeting"]
      [:p "Our next meeting will be on Wednesday, August 10th at 7pm at the "
       [:a {:href "http://freighthouse.dunnbros.com/"} "Freight House Dunn Bros"] "."]
      [:h2 "July 13, 2011"]
