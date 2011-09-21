@@ -22,21 +22,29 @@
       ]
      [:img {:id "logo" :src "/images/lambda.png"}]
      [:h2 "Next Meeting"]
-     [:p "Our next meeting will be on Wednesday, September 7th at 7pm at "
-      [:a {:href "http://refactr.com/contact/"} "Refactr"] "."]
+     [:p "We meet the first Wednesday of the month at 7pm at "
+      [:a {:href "http://refactr.com/contact/"} "Refactr"]
+      ". Our next meeting will be on October 5th."]
+
+     [:h2 "September 7, 2011"]
+     [:p 
+      "Ben Peirce talked about "
+      [:a {:href "http://bpeirce.me/clojure-sequence-implementations.html"}
+       "Clojure sequence implementations"]
+      " and Brian Maddy talked about "
+      [:a {:href "https://docs.google.com/a/brianmaddy.com/present/view?id=dwqzvn5_14f7nm7ngk"} "ClojureScript"]
+      "."]
 
      [:h2 "August 10, 2011"]
      [:p 
-      [:a {:href "http://twitter.com/bpeirce"} "Ben"]
-      " walked through how he used "
+      "Ben Peirce walked through how he used "
       [:a {:href "https://github.com/mmcgrana/ring"} "Ring"]
       " and "
       [:a {:href "https://github.com/weavejester/hiccup"} "Hiccup"]
       " to make "
       [:a {:href "https://github.com/bpeirce/clojure.mn"} "this site"]
       ".  "
-      [:a {:href "http://twitter.com/bmaddy"} "Brian"]
-      " showed how he used "
+      "Brian Maddy showed how he used "
       [:a {:href "https://github.com/cgrand/enlive"} "Enlive"]
       " for one of his sites."
       ]
@@ -46,4 +54,7 @@
       [:a {:href "http://clojure-conj.org"} "Clojure/conj 2011"]
       ", compared the JVM to the CLR, and surveyed the NoSQL landscape."]
      ]
+
+    [:p {:class "footer"}
+     [:a {:href "https://github.com/bpeirce/clojure.mn"} "Fork this site!"] ]
     ]))

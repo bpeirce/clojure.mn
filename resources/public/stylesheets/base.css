@@ -22,6 +22,14 @@ p {
     margin-top: 10px;
 }
 
+a {
+    color: #000;
+}
+
+a:visited {
+    color: #555;
+}
+
 img#logo {
     margin-top: 20px;
     display: block;
@@ -39,6 +47,11 @@ img#logo {
 .announcement {
     text-align: center;
     margin-bottom: 10px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
 }
 
 #clojure-j {
