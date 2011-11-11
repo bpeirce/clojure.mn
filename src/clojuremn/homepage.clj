@@ -24,7 +24,19 @@
      [:h2 "Next Meeting"]
      [:p "We meet the first Wednesday of the month at 7pm at "
       [:a {:href "http://refactr.com/contact/"} "Refactr"]
-      ". Our next meeting will be on October 5th."]
+      ". Our next meeting will be on December 7th."]
+
+     [:h2 "November 2, 2011"]
+     [:p 
+      "Brian Maddy talked about "
+      [:a {:href "https://docs.google.com/a/brianmaddy.com/presentation/pub?id=1kXvRBksA7DtDpie3JOU7vY2VH23yLFpUVFc98BYLKnk&start=false&loop=false&delayms=3000#slide=id.p"} "Functional Relational Programming"]
+      " and Ben Peirce talked about some tools for command line Clojure programs."]
+
+    [:h2 "October 5, 2011"]
+     [:p 
+      "Greg Allen talked about Clojure's "
+      [:a {:href "https://docs.google.com/present/edit?id=0AVDE9VMKvEjHZGdrZzJwcjJfMTEyYzZ6NmJwZHE&hl=en_US"} "java interop"]
+      " and Ben Peirce talked about the relational algebra as its used in Clojure.sets."]
 
      [:h2 "September 7, 2011"]
      [:p 
