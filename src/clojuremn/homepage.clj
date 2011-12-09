@@ -24,7 +24,15 @@
      [:h2 "Next Meeting"]
      [:p "We meet the first Wednesday of the month at 7pm at "
       [:a {:href "http://refactr.com/contact/"} "Refactr"]
-      ". Our next meeting will be on December 7th."]
+      ". Our next meeting will be on January 4th."]
+
+     [:h2 "December 7, 2011"]
+     [:p 
+      "Brian Maddy and Ben Peirce gave a review of "
+      [:a {:href "http://clojure-conj.org/"} "Clojure/conj 2011"]
+      " and Dan Callahan talked about "
+      [:a {:href "http://golang.org/"} "Go"]
+      "'s approach to concurrency."]
 
      [:h2 "November 2, 2011"]
      [:p 
