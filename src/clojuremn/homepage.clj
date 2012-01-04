@@ -22,9 +22,10 @@
       ]
      [:img {:id "logo" :src "/images/lambda.png"}]
      [:h2 "Next Meeting"]
+     [:p [:b "Notice: "] "Due to lack of time during the holidays, we've cancelled the January meeting.  We'll resume our regular meetings in February."]
      [:p "We meet the first Wednesday of the month at 7pm at "
       [:a {:href "http://refactr.com/contact/"} "Refactr"]
-      ". Our next meeting will be on January 4th."]
+      ". Our next meeting will be on February 1st."]
 
      [:h2 "December 7, 2011"]
      [:p 
