@@ -21,8 +21,16 @@
       "."
       ]
      [:img {:id "logo" :src "/images/lambda.png"}]
-     [:h2 "Next Meeting"]
-     [:p [:b "Notice: "] "Due to lack of time during the holidays, we've cancelled the January meeting.  We'll resume our regular meetings in February."]
+     [:h2 "Next Meeting: Noir is the new Black"]
+     [:p {:class "announcement"} "Presented by Tom Marble"]
+     [:p {:class "announcement"} "February 1, 2012"]
+     [:p "Tom will share experiences in developing a web application
+using Noir and some of the fun along the way (e.g. working around the
+not-yet-complete modularization of clojure-contrib).  He also give you
+a sneak peak of his "
+      [:a {:href "http://info9.net/wiki/tmarble/posts/Two_DevRooms_for_FOSDEM_2012/"} "upcoming weekend"]
+      " (what you will be missing at Europe's biggest open source conference)."]
+
      [:p "We meet the first Wednesday of the month at 7pm at "
       [:a {:href "http://refactr.com/contact/"} "Refactr"]
       ". Our next meeting will be on February 1st."]
@@ -31,7 +39,9 @@
      [:p 
       "Brian Maddy and Ben Peirce gave a review of "
       [:a {:href "http://clojure-conj.org/"} "Clojure/conj 2011"]
-      " and Dan Callahan talked about "
+      " and "
+      [:a {:href "http://dancallahan.info/"} "Dan Callahan"]
+      " talked about "
       [:a {:href "http://golang.org/"} "Go"]
       "'s approach to concurrency."]
 
