@@ -1,0 +1,330 @@
+#+TITLE:	Noir is the new Black
+#+AUTHOR:	Tom Marble
+#+EMAIL:	tmarble@info9.net
+#+STARTUP:	content
+
+* Overview
+
+Let's talk about Noir http://webnoir.org
+
+...And all the things you will probably want to make 
+a nice Clojure based web application.
+
+** Overview: What is that presentation tool?
+
+This is *org-tree-slide* from https://github.com/takaxp/org-tree-slide
+
+For more on org mode see http://orgmode.org/org.html
+
+** Overview: Topics to cover
+
+Press *f9* to see the list of topics
+
+*** Note's on what I put in my .emacs.d/custom.el
+
+(require 'org-tree-slide)
+
+(global-set-key (kbd "<f1>") 'show-all)
+(global-set-key (kbd "<f5>") 'text-scale-decrease)
+(global-set-key (kbd "<f6>") 'text-scale-increase)
+(global-set-key (kbd "<f8>") 'org-tree-slide-mode)
+(global-set-key (kbd "<f9>") 'org-tree-slide-content)
+
+
+* A little about Tom
+
+tmarble
+[[file://home/tmarble/Pictures/Tom/Mugshot2011/Tom-2011-200.jpg]]
+
+* Background for my work in Noir
+
+Client project (can't talk about it yet :( )
+- Multiplayer online game hosting
+- Website needed for user registration and configuration
+- The game itself is in Java (not Clojure)
+
+Green light to open source generic bits
+- yeah!
+- I'm learning about how/where to push changes upstream
+
+Shout out to Chris Granger:
+  https://twitter.com/#!/ibdknox/status/162723522752430080
+
+* The tools you will need to be successful
+
+There are some fantastic tools to get you going:
+- mvn
+- lein
+- Debian
+- Redis
+- Jenkins
+- Trac
+
+* Maven
+
+What's the difference between Apache Ant and Maven?
+
+Finding dependencies: =mvn dependency:tree -DoutputFile=dependency.txt=
+
+my-website:my-website:jar:0.1.0-SNAPSHOT
++- org.clojure:clojure:jar:1.3.0:compile
+\- noir:noir:jar:1.2.2-SNAPSHOT:compile
+   +- compojure:compojure:jar:1.0.0-RC2:compile
+   |  +- org.clojure:core.incubator:jar:0.1.0:compile
+   |  +- org.clojure:tools.macro:jar:0.1.0:compile
+   |  +- clout:clout:jar:1.0.0:compile
+   |  \- ring:ring-core:jar:1.0.1:compile
+   |     +- commons-io:commons-io:jar:1.4:compile
+   |     +- commons-fileupload:commons-fileupload:jar:1.2.1:compile
+   |     \- javax.servlet:servlet-api:jar:2.5:compile
+   +- org.clojure:tools.namespace:jar:0.1.0:compile
+   |  \- org.clojure:java.classpath:jar:0.1.0:compile
+   +- clj-json:clj-json:jar:0.4.3:compile
+   |  \- org.codehaus.jackson:jackson-core-asl:jar:1.5.0:compile
+   +- ring:ring:jar:1.0.1:compile
+   |  +- ring:ring-devel:jar:1.0.1:compile
+   |  |  \- ns-tracker:ns-tracker:jar:0.1.1:compile
+   |  +- ring:ring-jetty-adapter:jar:1.0.1:compile
+   |  |  +- org.mortbay.jetty:jetty:jar:6.1.25:compile
+   |  |  |  \- org.mortbay.jetty:servlet-api:jar:2.5-20081211:compile
+   |  |  \- org.mortbay.jetty:jetty-util:jar:6.1.25:compile
+   |  \- ring:ring-servlet:jar:1.0.1:compile
+   +- hiccup:hiccup:jar:0.3.7:compile
+   +- clj-stacktrace:clj-stacktrace:jar:0.2.3:compile
+   +- ring-reload-modified:ring-reload-modified:jar:0.1.1:compile
+   +- net.java.dev.jets3t:jets3t:jar:0.8.1:compile
+   |  +- commons-codec:commons-codec:jar:1.3:compile
+   |  +- commons-logging:commons-logging:jar:1.1.1:compile
+   |  +- commons-httpclient:commons-httpclient:jar:3.1:compile
+   |  \- com.jamesmurty.utils:java-xmlbuilder:jar:0.4:compile
+   \- org.mindrot:jbcrypt:jar:0.3m:compile
+
+* Leiningen
+
+Leiningen is awesome
+  https://github.com/technomancy/leiningen
+  
+
+Use the REPL *swank-clojure*
+  https://github.com/technomancy/swank-clojure
+
+Get...
+$ lein plugin install swank-clojure 1.4.0
+$ lein plugin install lein-localrepo 0.3
+$ lein plugin install lein-noir 1.2.1
+
+=lein localrepo help=
+
+Public Repos: http://clojars.org/
+
+Private Repos:  https://github.com/technomancy/s3-wagon-private
+
+* Debian
+
+You will need to deploy your server on something somewhere.
+
+Success on Amazon EC2, private hosting
+
+Very predictable, easy to administer & automate, secure, stable
+
+* Redis
+
+Amazing NoSQL Database: http://redis.io
+
+With a Clojure binding! https://github.com/mmcgrana/clj-redis
+
+* Jenkins
+
+Continuous Integration Server: http://jenkins-ci.org/
+
+Amazing Plugins: https://wiki.jenkins-ci.org/display/JENKINS/Plugins
+
+The ones that I use:
+- Trac Publisher
+- Dependency Graph Viewer
+- IM
+- Pathignore (essential for big git repo)
+- SSH Slaves
+- Thin Backup
+- Build Result Trigger
+
+Fun ones
+- Gravatar
+- Emotional Jenkins
+
+KK slides from *today* at MonkiGras in London
+  http://www.slideshare.net/kohsuke/building-developer-community
+  
+* Using Jenkins
+
+Git push triggers Jenkins
+Updates the one (master) workspace
+Projects started based on updated paths
+
+Java Client
+- Builds on Linux
+- Triggers native Mac OS X build on Mac slave
+- Triggers native Windows build on Windows slave
+
+Deploying Noir application
+- shuts down dev website
+- updates code
+- restarts website
+
+* Trac
+
+http://trac.edgewall.org/
+
+- Tickets (bugs, tasks), Reports, Browse code, Timeline, Wiki
+- Can now use git (yeah!)
+- Integration with Jenkins
+   http://trac-hacks.org/wiki/XmlRpcPlugin 
+
+* The state of Clojure Contrib
+
+"Modularization of Contrib"
+
+   http://dev.clojure.org/display/doc/Clojure+Contrib
+
+Wait, why isn't there a project.clj (for lein)?
+- officially must use mvn (!) (lein originally could not deploy
+  to remote mvn repos)
+
+The idea is that everything that hasn't been modularized yet 
+is supposedly either low quality or in low demand
+
+* Command line processing and configuration files
+
+tools.cli
+   https://github.com/clojure/tools.cli 
+   awesome, right?
+connected to SSH agent (has at least one identity)
+tmarble@noir 102$ lein search tools.cli
+ == Results from central - Showing page 1 / 1 total
+[org.clojure/tools.cli "0.1.0"]
+[org.clojure/tools.cli "0.1.0"]
+tmarble@noir 103$ 
+
+* Using Clojars
+
+Using clojars: change groupID to highlight it's non-canonical
+
+Also it's tricky to find out what the *real* disposition of
+stuff is.. I wanted java-utils
+  moved to clojure.java.io
+
+* Pretty Print HTML and XML
+
+I created a future-contrib package:
+file:~/src/maas/clojure/future-contrib/project.clj
+
+See file:~/src/maas/clojure/future-contrib/src/future_contrib/core.clj
+
+Demonstrate example with file:~/src/clojuremn/example.xml
+
+* redis2xml
+
+Demonstrates command line processing and configuration files
+
+see file:~/src/maas/clojure/redis2xml/project.clj
+
+see: file:~/.redis2xml
+
+also try command line:
+
+=redis-cli -a NoOneWillEverGuess -n 3=
+
+./bin/redis2xml -v -n 3 -f -i ~/src/clojuremn/example.xml
+
+* Example Noir site
+
+See file:~/src/noir-examples/my-website
+
+* Wishlist of Noir features
+
+Wishlist
+- I need a "dispatch catch all". I want to take arbitrary URI's 
+   (e.g. /css/mystyle-123.css) and generate content dynamically
+   based on the pathname(s) in the URI. I don't think this
+   is currently possible
+- Apache compatible logs (for awstats)
+- Atmosphere tie in for websockets (using jetty 8)
+  I realize that we probably will have to "fix" the plumbing above Jetty
+  (ring, compojure, noir) to become websocket aware.  Wouldn't this
+  be cool to do in Noir...?
+https://jfarcand.wordpress.com/tag/atmosphere-comet-websocket-redis-jqeury-pubsub/
+
+
+* Preview of FOSDEM 2012
+
+This weekend I will be at FOSDEM 2012:
+The Free and Open Source Developers European Meeting
+
+http://fosdem.org/2012/schedule/speaker/tom_marble
+
+* Q/A + Live Hacking
+
+[[file:~/src/clojuremn/]]
+
+Discussion notes:
+
+** From Ted Naleid
+During Tom's talk, I mentioned that lein just got a
+new plugin to be able to pull dependencies directly from git repos.
+Turns out that this based on code extracted from the ClojureScript One
+project:
+  https://github.com/tobyhede/lein-git-deps
+
+This looks like a great way to work with bleeding edge dependencies
+without having to mess around with publishing something temporary out
+on clojars.
+
+** On source code examples
+
+I'm super busy at the moment (in fact I'm on a plane to FOSDEM).
+
+As soon as I can I will push the several code examples to the public.
+
+Please check my blog for for updates on this:
+http://info9.net/wiki/tmarble/
+
+** Apology for those who "were not there"
+
+My talk was very dynamic and involved switching multiple
+times between org-tree-slide mode, viewing code, 
+running in the REPL, running the shell and visualizing
+webpages in Firefox.
+
+If you are wondering why you aren't seeing whizbang
+stuff in this boring text file.. .it's because you missed
+the fireworks! :)
+
+** Switching from Mac to Debian
+
+I've been using GNU/Linux regularly since 1998 and Debian
+since 2003. Due to my work in Java, however, I often need
+to use other platforms (where other means Windows and Mac).
+
+It's quite easy to universally loath Windows.  I am
+please, however, whenever I can make a Windows user happy 
+by giving them software that meets their needs.
+
+The trouble with Shiny (Mac) is that it's always been
+(seemed) like it was temptingly "high quality".  And in
+some ways it is.  As a software developer, however, one
+quickly realizes just how "wonky" Mac OS X really is...
+Not the least of this is the need to install some 3rd
+party package system (e.g. MacPorts) just to get the build
+tools necessary to work on conventional projects.
+
+So at the meeting I saw visible signs of a trend
+from Mac to GNU/Linux -- and specifically Debian.
+At the same moment I have heard many long term 
+Mac fanboys complain about Lion. So you can imagine
+my amazement when I found this blog post from
+@danny_cpj :
+
+http://www.oblomovka.com/wp/2012/01/16/some-rambling-conversations-ive-had-on-moving-from-macos-to-debian/ 
+
+Needless to say I'm a big Debian fan and I will help 
+you make the switch if you'd like.

@@ -21,19 +21,23 @@
       "."
       ]
      [:img {:id "logo" :src "/images/lambda.png"}]
-     [:h2 "Next Meeting: Noir is the new Black"]
-     [:p {:class "announcement"} "Presented by Tom Marble"]
-     [:p {:class "announcement"} "February 1, 2012"]
-     [:p "Tom will share experiences in developing a web application
-using Noir and some of the fun along the way (e.g. working around the
-not-yet-complete modularization of clojure-contrib).  He also give you
-a sneak peak of his "
-      [:a {:href "http://info9.net/wiki/tmarble/posts/Two_DevRooms_for_FOSDEM_2012/"} "upcoming weekend"]
-      " (what you will be missing at Europe's biggest open source conference)."]
+
+     [:h2 "Next Meeting: Wednesday, March 7"]
 
      [:p "We meet the first Wednesday of the month at 7pm at "
       [:a {:href "http://refactr.com/contact/"} "Refactr"]
-      ". Our next meeting will be on February 1st."]
+      "."]
+
+     [:h2 "February 1, 2012"]
+     [:p
+      [:a {:href "http://twitter.com/tmarble"} "Tom Marble"]
+      " shared his experiences "
+      [:a {:href "/presentations/noir-is-the-new-black.org"} "developing a web application using Noir"]
+      " and "
+      [:a {:href "http://twitter.com/akpanydre"} "Benjamin Ebby"]
+      " talked about "
+      [:a {:href "http://outcastgeek.com/blog/build-your-polyglot-app-with-jruby-and-rake.html"} "using JRuby and Rake with Clojure"]
+      "."]
 
      [:h2 "December 7, 2011"]
      [:p 
