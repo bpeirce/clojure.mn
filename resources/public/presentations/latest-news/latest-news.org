@@ -1,0 +1,105 @@
+#+TITLE: April 2012 Clojure News
+#+AUTHOR: Ben Peirce
+
+#+BEGIN_HTML
+<p>Type <strong>T</strong> to begin the slide show.</p>
+#+END_HTML
+
+* April News                                                          :slide:
+
+**** [[http://paper.li/ajlopez/1291580164][The Clojure Daily]]
+
+**** [[http://bits.blogs.nytimes.com/2012/04/03/prismatic-hopes-to-offer-a-new-category-of-social-news/][Prismatic Hopes to Create a New Category of Social News]]
+     See also [[https://github.com/strangeloop/clojurewest2012-slides/blob/master/Cross-Prismatic.pdf][Why Prismatic Goes Faster With Clojure]] from Strange Loop .
+
+**** [[http://www.clojurebook.com/][Clojure Programming]] ships this month.
+
+* Playing with other languages                                        :slide:
+
+**** [[https://github.com/halgari/clojure-py][clojure-py]]
+     "An implementation of Clojure in pure Python"
+
+**** [[https://github.com/takeoutweight/clojure-scheme][clojure-scheme]]
+     "Clojure to Scheme to C to the bare metal."
+
+**** [[https://github.com/headius/cloby][Cloby]] 
+     "A Clojure Ref/STM plugin for JRuby." Not new, but I just saw
+     this.
+
+* New Libraries                                                       :slide:
+
+**** [[https://github.com/clojurewerkz/mailer][Clojurewerkz Mailer]] 
+     "An ActionMailer-inspired mailer library. Combines Postal,
+     Clostache, some conventions and support for multiple delivery
+     modes"
+
+**** [[http://pelle.github.com/clauth/][Clauth]]
+     "OAuth 2 based simple authentication system for Clojure Ring"
+
+**** [[http://budu.github.com/lobos/index.html][Lobos]]
+     "Lobos is a library to help you create and modify database
+     schemas using Clojure code."
+
+**** [[https://github.com/liquidz/misaki][Misaki]]
+     "Jekyll inspired static site generator in Clojure"
+
+* Other new Projects                                                  :slide:
+
+**** [[http://himera.herokuapp.com/index.html][Himera]]
+     "ClojureScript compiler as web service."
+***** See [[http://blog.fogus.me/2012/03/27/compiling-clojure-to-javascript-pt-3-the-himera-model/][Compiling Clojure to JavaScript, pt. 3 – The Himera Model]]
+
+
+**** [[https://github.com/rplevy/swiss-arrows][swiss-arrows]]
+     "A collection of arrow macros."
+
+* Talks and articles                                                  :slide:
+
+**** [[http://www.scribd.com/doc/32281187/Asynchronous-concurrency-in-Clojure-and-a-few-other-languages][Asysnchronous Concurrency in Clojure]]
+
+**** [[http://www.ibm.com/developerworks/java/library/j-couchdb-clojure/index.html?ca%3Ddrs-][Using CouchDB with Clojure]]
+
+
+**** [[http://www.clojure.net/2012/03/24/Continuation-monad/][Continuation Monad]]
+
+**** [[http://www.javaworld.com/javaworld/jw-03-2012/120322-clojure-inventor-aims-for-android.html?source%3DIFWNLE_jw_2012-03-27][Clojure inventor Hickey now aims for Android]]
+
+**** [[http://blog.incubaid.com/2012/03/28/the-game-of-distributed-systems-programming-which-level-are-you/][The Game of Distributed Systems Programming. Which Level Are You?]]
+
+**** [[http://www.infoq.com/interviews/hickey-datomic][Rich Hickey on Datomic: Datalog, Databases, Persistent Data Structures]]
+
+* Instruction                                                         :slide:
+
+**** [[http://codelesson.com/courses/view/introduction-to-clojure][Introduction To Clojure]]
+     "The Clojure programming language, from Lisp roots, to JVM ubiquity"
+  
+**** [[http://www.codeschool.com/code_tv/getting-started-with-clojure-part-1][Getting Started with Clojure]] at Code School
+
+**** [[http://www.elangocheran.com/blog/2012/03/the-newbies-guide-learning-clojure/][The Newbie’s Guide to Learning Clojure]]
+
+**** [[http://www.unexpected-vortices.com/clojure/brief-beginners-guide/][A Brief Beginner's Guide To Clojure]]
+
+
+
+** The End                                                            :slide:
+
+**** [[https://github.com/relevance/org-html-slideshow][org-HTML-slideshow]]
+     Library to turn org-mode HTML exports into presentations.
+     Written in ClojureScript.
+
+#+TAGS: slide(s)
+
+#+STYLE: <link rel="stylesheet" type="text/css" href="common.css" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="screen.css" media="screen" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="projection.css" media="projection" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="presenter.css" media="presenter" />
+
+#+BEGIN_HTML
+<script type="text/javascript" src="org-html-slideshow.js"></script>
+#+END_HTML
+
+# Local Variables:
+# org-export-html-style-include-default: nil
+# org-export-html-style-include-scripts: nil
+# buffer-file-coding-system: utf-8-unix
+# End:

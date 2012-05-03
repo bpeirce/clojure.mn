@@ -22,10 +22,41 @@
       ]
      [:img {:id "logo" :src "/images/lambda.png"}]
 
-     [:h2 "Next Meeting: Wednesday, March 7"]
+     [:h2 "Next Meeting: Wednesday, June 6"]
 
      [:p "We meet the first Wednesday of the month at 7pm at "
       [:a {:href "http://refactr.com/contact/"} "Refactr"]
+      "."]
+
+     [:h2 "May 2, 2012"]
+     [:p
+      [:a {:href "http://dancallahan.info/"} "Dan Callahan"]
+      " talked about "
+      [:a {:href "http://identity.mozilla.com/post/18038609895/introducing-mozilla-persona"} "Mozilla Persona"]
+      " and the group hacked on a "
+      [:a {:href "https://github.com/tmarble/nongrata"} "Noir implementation of that technology"]
+      "."]
+
+     [:h2 "April 4, 2012"]
+     [:p
+      [:a {:href "https://twitter.com/tednaleid"} "Ted Naleid"]
+      " gave his "
+      [:a {:href "http://tednaleid.github.com/showoff-clojurewest/#1"} "review of Clojure/West 2012"]
+      " and "
+      [:a {:href "http://bpeirce.me"} "Ben Peirce"]
+      " talked about "
+      [:a {:href "/presentations/latest-news/latest-news.html"} "some random Clojure news"]
+      "."]
+
+     [:h2 "March 7, 2012"]
+     [:p
+      [:a {:href "https://github.com/nickbauman/"} "Nick Bauman"]
+      " talked about "
+      [:a {:href "http://tinyurl.com/redis-s-expression"} "redit-s-expression"]
+      " and "
+      [:a {:href "https://twitter.com/#!//bmaddy"} "Brian Maddy"]
+      " talked about "
+      [:a {:href "https://docs.google.com/file/d/0B593N-xk-VfFVTJtNndQZk1UbFNRc1MzXzFxR21pZw/edit"} "Pallet"]
       "."]
 
      [:h2 "February 1, 2012"]
