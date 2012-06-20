@@ -22,10 +22,30 @@
       ]
      [:img {:id "logo" :src "/images/lambda.png"}]
 
-     [:h2 "Next Meeting: Wednesday, June 6"]
+     [:h2 "Next Meeting: Wednesday, August 1"]
 
      [:p "We meet the first Wednesday of the month at 7pm at "
       [:a {:href "http://refactr.com/contact/"} "Refactr"]
+      "."
+      [:p " We will not be holding a meeting in July meeting since the first Wednesday falls on Independence Day."]]
+
+     [:h2 "June 6, 2012"]
+     [:p 
+      [:a {:href "https://github.com/nickbauman/"} "Nick Bauman"]
+      " presented his ClojureScript work on the "
+      [:a {:href "https://github.com/tmarble/nongrata"} "Nongrata"]
+      " project.  We then held lightning talks with "
+      [:a {:href "http://dancallahan.info/"} "Dan Callahan"]
+      " discussing "
+      [:a {:href "http://identity.mozilla.com/post/18038609895/introducing-mozilla-persona"} "Persona"]
+      ", "
+      [:a {:href "http://twitter.com/tmarble"} "Tom Marble"]
+      " demoing his "
+      [:a {:href "http://www.raspberrypi.org/"} "Raspberry Pi"]
+      " serving the Nongrata website, and "
+      [:a {:href "http://twitter.com/bmaddy"} "Brian Maddy"]
+      " talking about "
+      [:a {:href "https://github.com/clojure/core.logic"} "core.logic"]
       "."]
 
      [:h2 "May 2, 2012"]
@@ -54,7 +74,7 @@
       " talked about "
       [:a {:href "http://tinyurl.com/redis-s-expression"} "redit-s-expression"]
       " and "
-      [:a {:href "https://twitter.com/#!//bmaddy"} "Brian Maddy"]
+      [:a {:href "http://twitter.com/bmaddy"} "Brian Maddy"]
       " talked about "
       [:a {:href "https://docs.google.com/file/d/0B593N-xk-VfFVTJtNndQZk1UbFNRc1MzXzFxR21pZw/edit"} "Pallet"]
       "."]
